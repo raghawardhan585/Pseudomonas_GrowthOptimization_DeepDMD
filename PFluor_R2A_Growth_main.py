@@ -15,7 +15,7 @@ NO_SAMPLES = 55
 # The file from the microplate reader is parsed using main.py and the useful data is converted into a .csv file
 # .csv ---> pandas ---> dictionary file with keys
 # MP = pd.read_csv('Expt4.csv')      # MP - Micro Plate
-MP = pd.read_csv('/Users/shara/Desktop/Vnat_GrowthCurveAnalysis/PFluor_R2A_Expt1.csv')      # MP - Micro Plate
+MP = pd.read_csv('PREPROCESSED_DATA/PFluor_R2A_Expt1.csv')      # MP - Micro Plate
 MP = MP.iloc[:,2:MP.shape[1]]
 # gra.plot_Growth(MP)
 # exit()

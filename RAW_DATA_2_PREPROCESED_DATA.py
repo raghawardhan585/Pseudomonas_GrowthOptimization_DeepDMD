@@ -8,7 +8,7 @@ import pandas as pd
 filename = "SHARA_strain_PPutida_medium_M9min_GrowthCurve1.txt"
 
 RawData = [];
-with open(filename, "r") as f:  # 'r' is used to specify Read Mode
+with open("RAW_DATA/" + filename, "r") as f:  # 'r' is used to specify Read Mode
     reader = f.readlines()
     linecount = len(reader)
     # Skip everything upto the point where our useful data is available
@@ -34,7 +34,7 @@ with open(filename, "r") as f:  # 'r' is used to specify Read Mode
     Tb = pd.DataFrame(RawData[1:], columns=RawData[0])
 f.close()
 Tb = Tb.drop(columns='T∞',axis =1) # Dropping the T∞ column
-Tb.to_csv('PPutida_M9min_Expt1.csv')
+Tb.to_csv('PREPROCESSED_DATA/PPutida_M9min_Expt1.csv')
 
 # Saving as a '.mat' file
 # import scipy.io as sio
